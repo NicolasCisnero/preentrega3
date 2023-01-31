@@ -1,0 +1,271 @@
+@import "generales";
+@import "index";
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+section {
+    grid-area: section;
+}
+
+article {
+    grid-area: article;
+}
+
+footer {
+
+    grid-area: footer;
+}
+
+.grilla-general {
+    margin-bottom: 1.5em;
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "section"
+        "article"
+        "footer";
+}
+
+.violet {
+    background: rgb(81, 76, 105);
+    background: linear-gradient(28deg, rgb(70, 68, 105) 32%, rgba(152, 197, 249, 1) 50%, rgb(44, 35, 78) 71%, rgba(27, 43, 179, 0.455) 100%);
+    margin-bottom: 1.5em;
+}
+
+
+
+
+
+
+.contacto {
+    margin-top: 1.5em;
+}
+
+.redes {
+    color: whitesmoke;
+}
+
+.nuestra {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.la-musica {
+    text-align: center;
+    letter-spacing: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    margin-bottom: 2.5em;
+}
+
+p {
+    text-align: center;
+    letter-spacing: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    margin-bottom: 2.5em;
+}
+
+.tienda {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.acerca {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.conoce {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 2.5em;
+    font-size: 40px;
+}
+
+.productos {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    margin-bottom: 2.5em;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+
+}
+
+.guitarras_ {
+    width: 400px;
+    height: 400px;
+    border: 4px solid black;
+}
+
+@media (min-width: 480px) {
+    .grilla-general {
+        margin-bottom: 1em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "header  header"
+            "nav  nav"
+            "main  main"
+            "section  section"
+            "article  article"
+            "footer  footer";
+    }
+
+    .violet {
+        background: rgb(0, 0, 0);
+        background: linear-gradient(326deg, rgb(51, 50, 50) 0%, rgba(190, 166, 166, 1) 52%, rgb(97, 58, 8) 100%);
+    }
+
+    .titulo {
+        overflow: hidden;
+        transition: all 1.5s;
+        border: none;
+        margin-bottom: 30px;
+    }
+
+    .galeria .logos {
+        overflow: hidden;
+        transition: all 1.5s;
+
+    }
+
+    footer {
+        background: rgb(0, 0, 0);
+        background: linear-gradient(326deg, rgb(51, 50, 50) 0%, rgba(190, 166, 166, 1) 52%, rgb(97, 58, 8) 100%);
+    }
+
+    body {
+        background: rgb(0, 0, 0);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(190, 166, 166, 1) 18%, rgba(56, 5, 15, 0.12648809523809523) 100%);
+
+    }
+
+    .conoce {
+        background: rgb(0, 0, 0);
+        background: linear-gradient(183deg, rgba(0, 0, 0, 1) 0%, rgba(108, 109, 124, 1) 26%, rgba(166, 167, 190, 0.8631827731092436) 49%, rgba(56, 5, 15, 0.12648809523809523) 91%);
+        margin-top: 0px;
+    }
+
+    .guitarras_ {
+        overflow: hidden;
+        transition: all 1.5s;
+        transform: scale(0.9);
+
+    }
+
+    .producto-grilla {
+        margin-bottom: 1em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "header  header"
+            "nav  nav"
+            "main  main"
+            "section  section"
+            "footer  footer";
+    }
+}
+
+@media (min-width:768px) {
+    .grilla-general {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "header   header   header"
+            "nav   nav   nav"
+            "main   main   main"
+            "section   section   section"
+            "article  article article"
+            "footer  footer footer";
+    }
+
+    body {
+        background: rgb(5, 8, 66);
+        background: linear-gradient(108deg, rgba(5, 8, 66, 0.7847514005602241) 1%, rgba(214, 33, 10, 0.2049194677871149) 100%);
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: center;
+        align-items: center;
+    }
+
+    .productos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        overflow: hidden;
+        transition: all 1.5s;
+        transform: scale(0.9);
+    }
+
+    .conoce {
+        background: rgb(5, 8, 66);
+        background: linear-gradient(234deg, rgba(5, 8, 66, 0.7847514005602241) 22%, rgba(214, 33, 10, 0.2049194677871149) 86%);
+    }
+
+}
+
+@media(min-width:1024px) {
+    .grilla-general {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "header   header   header header"
+            "nav   nav   nav nav"
+            "main   main   main main"
+            "section   section   section section"
+            "article  article article article"
+            "footer  footer footer footer";
+    }
+
+    body {
+        background: rgb(99, 0, 32);
+        background: radial-gradient(circle, rgba(99, 0, 32, 0.8547794117647058) 11%, rgba(148, 187, 233, 1) 90%);
+    }
+
+    .propaganda_ {
+        width: 70%;
+    }
+
+    .tienda_ {
+        width: 70%;
+        display: flex;
+        justify-items: center;
+        margin-top: 30px;
+        margin-bottom: 2.5em;
+    }
+
+    .conoce {
+        margin-bottom: 30px;
+        padding: 50px;
+        overflow: hidden;
+        transition: all 1.5s;
+    }
+
+    .productos {
+        overflow: hidden;
+        transition: all 0.5s;
+    }
+}
